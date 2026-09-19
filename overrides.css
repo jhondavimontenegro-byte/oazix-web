@@ -1,0 +1,13 @@
+/* Galería de sabores: las imágenes llenan el recuadro sin deformarse. */
+.flavor { padding: 0; min-height: 210px; background: var(--navy); }
+.flavor::before { display: none; }
+.flavor > img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: center 43%; }
+.flavor > img + div { position: absolute; inset: auto 0 0; padding: 2.4rem .95rem .9rem; background: linear-gradient(transparent, rgba(1, 22, 40, .92)); }
+.flavor span { top: auto; bottom: 4.9rem; left: .95rem; z-index: 1; }
+.flavor h3 { font-size: 1.25rem; }
+.flavor p { font-size: .72rem; }
+.logo-presentation { padding: 0; background: #071f3d; }
+.logo-presentation::before, .logo-presentation::after { display: none; }
+.logo-presentation img { width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: .94; }
+.logo-presentation span { position: absolute; bottom: 13px; left: 13px; border-radius: 99px; padding: .48rem .68rem; color: white; background: rgba(2, 26, 51, .82); font-size: .65rem; font-weight: 700; letter-spacing: .06em; }
+@media (max-width: 760px) { .flavor { min-height: 180px; } }
